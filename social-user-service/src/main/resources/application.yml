@@ -1,0 +1,34 @@
+spring:
+   application:
+     name: "social-user-service"
+
+server:
+   port: 8083
+
+rest:
+  api:
+    prefix: "/user"
+
+# Eureka configuration
+eureka:
+    client:
+        fetch-registry: true    
+#        serviceUrl:
+#            defaultZone: http://127.0.0.1:8761/eureka/  
+   
+# Expose all the actuator end points
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: "always"
+      
+## Configuring info endpoint
+info:
+  app:
+    name: "Spring Sample Application"
+    description: "This is my first spring boot application"
+    version: 1.0.0
+

@@ -1,0 +1,16 @@
+spring:
+   application:
+     name: "social-search-service"
+
+server:
+   port: 8081
+   
+# Expose all the actuator end points
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: "always"
+

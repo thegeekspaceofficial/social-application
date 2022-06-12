@@ -1,0 +1,31 @@
+spring:
+   application:
+     name: "social-view-service"
+     
+rest:
+  api:
+    prefix: "/view"
+    
+server:
+   port: 8084
+#   servlet:
+  #   context-path: "/view-service"
+  
+  
+# Eureka configuration
+eureka:
+    client:
+        fetch-registry: true  
+        serviceUrl:
+            defaultZone: http://127.0.0.1:8761/eureka/  
+   
+# Expose all the actuator end points
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  #    base-path: /view-service
+    health:
+      show-details: "always"
+

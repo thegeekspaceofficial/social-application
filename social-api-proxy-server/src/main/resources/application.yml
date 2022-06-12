@@ -1,0 +1,34 @@
+zuul:
+  routes:
+    social-user:
+      path: /users/**
+      serviceId: social-user-service
+      stripPrefix: false
+    view:
+      path: /view/**
+      serviceId: social-view-service
+      stripPrefix: false
+  
+spring:
+   application:
+     name: "social-api-proxy-server"
+
+server:
+   port: 8085
+   
+# Expose all the actuator end points
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: "always"
+# Increase the Hystrix timeout to 60s (globally)
+#hystrix:
+#  command:
+#    default:
+#     execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000    

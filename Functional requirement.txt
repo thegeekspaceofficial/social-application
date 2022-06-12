@@ -1,0 +1,26 @@
+Functional requirement
+1. user registeration
+2. make post - text, image, video, etc
+3. post actions - like, comment, share
+4. Add as friend
+5. timeline
+6. other profile/timeline
+7. 
+
+
+Non-Functional requirement:
+1. faster loading
+2. ready heavy
+
+
+User type:
+1. celebrities/famous
+2. active - currently online
+3. passive - not r
+
+
+
+Case 1 :
+ Search for user e.g hari kanure
+ then, select specific profile from search result
+ then, show the profile/timeline page which includes all the post that person shared.
